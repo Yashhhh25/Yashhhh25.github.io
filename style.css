@@ -10,23 +10,23 @@ html, body { overflow-x: hidden; }
 html { scroll-behavior: smooth; }
 
 :root {
-  --bg:            #070c18;
-  --bg-surface:    #0c1627;
-  --bg-elevated:   #0f1e35;
-  --border:        #182b44;
-  --border-light:  #223f60;
+  --bg:            #f5f0e8;
+  --bg-surface:    #ede7d9;
+  --bg-elevated:   #e4dccf;
+  --border:        #cfc5b4;
+  --border-light:  #b8ac9a;
 
-  --text-primary:  #dde5f0;
-  --text-secondary:#6b849e;
-  --text-muted:    #2e4563;
+  --text-primary:  #1c1813;
+  --text-secondary:#6b5d4f;
+  --text-muted:    #a8957f;
 
-  --accent:        #00c2ff;
-  --accent-dim:    rgba(0, 194, 255, 0.1);
-  --accent-glow:   rgba(0, 194, 255, 0.22);
-  --gold:          #f0b429;
-  --gold-dim:      rgba(240, 180, 41, 0.1);
-  --green:         #00d68f;
-  --green-dim:     rgba(0, 214, 143, 0.1);
+  --accent:        #1a3a5c;
+  --accent-dim:    rgba(26, 58, 92, 0.1);
+  --accent-glow:   rgba(26, 58, 92, 0.2);
+  --gold:          #b8722a;
+  --gold-dim:      rgba(184, 114, 42, 0.12);
+  --green:         #2d6a4f;
+  --green-dim:     rgba(45, 106, 79, 0.12);
 
   --font-display:  'Syne', sans-serif;
   --font-body:     'IBM Plex Serif', serif;
@@ -39,7 +39,6 @@ html { scroll-behavior: smooth; }
   --max-w:         1120px;
   --pad:           clamp(1.25rem, 5vw, 2.5rem);
 }
-
 /* ---- BASE ----------------------------------------------------- */
 body {
   background: var(--bg);
@@ -56,9 +55,9 @@ body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(circle, #1b2f4b 1px, transparent 1px);
+  background-image: radial-gradient(circle, #c2b5a3 1px, transparent 1px);
   background-size: 32px 32px;
-  opacity: 0.45;
+  opacity: 0.55;
   pointer-events: none;
   z-index: 0;
 }
@@ -99,7 +98,7 @@ body::after {
 }
 
 .nav.scrolled {
-  background: rgba(7, 12, 24, 0.93);
+  background: rgba(245, 240, 232, 0.93);
   backdrop-filter: blur(18px);
   border-color: var(--border);
 }
@@ -184,7 +183,7 @@ body::after {
   gap: 1rem;
   padding: 1rem var(--pad) 1.5rem;
   border-top: 1px solid var(--border);
-  background: rgba(7, 12, 24, 0.98);
+  background: rgba(245, 240, 232, 0.98);
 }
 .nav__mobile a {
   font-family: var(--font-mono);
@@ -278,9 +277,9 @@ body::after {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 5% 65%, rgba(0,194,255,0.07) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 45% at 85% 15%, rgba(240,180,41,0.05) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 40% at 60% 90%, rgba(0,214,143,0.04) 0%, transparent 50%);
+    radial-gradient(ellipse 80% 60% at 5% 65%, rgba(26,58,92,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 45% at 85% 15%, rgba(184,114,42,0.07) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 60% 90%, rgba(45,106,79,0.05) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -291,8 +290,8 @@ body::after {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: rgba(0,214,143,0.06);
-  border: 1px solid rgba(0,214,143,0.2);
+  background: rgba(45,106,79,0.07);
+  border: 1px solid rgba(45,106,79,0.25);
   padding: 0.35rem 0.9rem;
   border-radius: 100px;
   margin-bottom: 2.2rem;
@@ -316,7 +315,9 @@ body::after {
 /* Name */
 .hero__name {
   font-family: var(--font-display);
-  font-size: clamp(3.8rem, 12vw, 7.5rem);
+  font-size: clamp(2.2rem, 13vw, 7.5rem);
+  word-break: break-word;
+  overflow-wrap: break-word;
   font-weight: 800;
   line-height: 0.92;
   letter-spacing: -0.03em;
@@ -387,8 +388,8 @@ body::after {
 .section--alt {
   background: linear-gradient(180deg,
     transparent 0%,
-    rgba(12, 22, 39, 0.55) 20%,
-    rgba(12, 22, 39, 0.55) 80%,
+    rgba(210, 200, 185, 0.4) 20%,
+    rgba(210, 200, 185, 0.4) 80%,
     transparent 100%);
 }
 
