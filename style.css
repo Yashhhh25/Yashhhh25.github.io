@@ -5,7 +5,8 @@
    ================================================================ */
 
 /* ---- RESET & VARIABLES ---------------------------------------- */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; min-width: 0; }
+html, body { overflow-x: hidden; }
 html { scroll-behavior: smooth; }
 
 :root {
@@ -792,4 +793,23 @@ body::after {
   .about__metrics { grid-template-columns: 1fr 1fr; }
   .hero__ctas { flex-direction: column; width: 100%; }
   .hero__ctas .btn { justify-content: center; }
+}
+/* ---- MOBILE SAFE GUARDS (patch) -------------------------------- */
+.about__grid  { min-width: 0; }
+.about__right { min-width: 0; overflow-wrap: break-word; }
+.card         { min-width: 0; }
+.blog-item    { min-width: 0; }
+
+/* Tighten about-grid gap on mid-size screens (768px tablets) */
+@media (max-width: 860px) {
+  .about__grid { gap: 2rem; }
+}
+
+/* Ensure hero tags wrap cleanly */
+@media (max-width: 480px) {
+  .hero__tags    { gap: 0.35rem; }
+  .hero__status  { font-size: 0.65rem; }
+  .section__heading { font-size: 1.65rem; }
+  .blog-item     { padding: 1.25rem; }
+  .card__title   { font-size: 0.97rem; }
 }
